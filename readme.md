@@ -1,5 +1,5 @@
 # readme
-0.0.1
+0.0.1 | Public Domain
 
 A basic console program to add text to images and make memes.
 
@@ -14,8 +14,8 @@ This is how you use it:
 ```
 memetext ancient-aliens.jpg "" "i hold the world in my hands and an alien holds my hand"
 ```
-Gives you this
+Gives you this<br>
 ![](res/meme.jpg)
 
-#credits
-pressuru.otf is from the [memetastic project](https://github.com/gsantner/memetastic).
+# credits
+**pressuru.otf* is from the [memetastic project](https://github.com/gsantner/memetastic).
