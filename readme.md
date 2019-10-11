@@ -11,6 +11,9 @@ is inadequate.
 
 # overview
 This is how you use it:
+
+Note: Currently you can't change the text size. It is fixed to 48pt.
+
 ```
 memetext ancient-aliens.jpg "" "i hold the world in my hands and an alien holds my hand"
 ```
@@ -18,4 +21,4 @@ Gives you this<br>
 ![](res/meme.jpg)
 
 # credits
-**pressuru.otf* is from the [memetastic project](https://github.com/gsantner/memetastic).
+**pressuru.otf** is from the [memetastic project](https://github.com/gsantner/memetastic).
