@@ -12,5 +12,6 @@
 
   <ItemGroup>
 	<Content Include="res\pressuru.otf" CopyToOutputDirectory="PreserveNewest"/>
+	<Content Include="res\img\**" CopyToOutputDirectory="PreserveNewest"/>
   </ItemGroup>
 </Project>

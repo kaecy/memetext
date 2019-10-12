@@ -1,9 +1,9 @@
 # readme
-0.0.1 | Public Domain
+v0.0.2 | Public Domain
 
 A basic console program to add text to images and make memes.
 
-This is the new cross platform version. Is it cross platform? I don't know. Anyway it uses .Net Core 3 and 
+This is the new cross platform version of mememaker for .Net Core 3. Is it cross platform? I don't know. Anyway it uses .Net Core 3 and 
 they say it is cross platform.
 
 This version uses the Skia library for more control over the text. The graphics library inside .Net Core 3 
