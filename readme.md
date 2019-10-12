@@ -12,7 +12,7 @@ is inadequate.
 # build
 Install the .Net Core 3 SDK.
 
-To produce the binary files go To the project files and type:
+To produce the binary files go to the project files and type:
 
 ```
 dotnet publish -c Release
@@ -27,7 +27,7 @@ Note: Currently you can't change the text size. It is fixed to 48pt.
 memetext ancient-aliens.jpg "" "i hold the world in my hands and an alien holds my hand"
 ```
 
-Now you can use the internal image the program files like this:
+Now you can use the internal image in the program files like this:
 ```
 memetext /res:ancient-aliens "" "i hold the world in my hands and an alien holds my hand"
 ```
