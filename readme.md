@@ -9,6 +9,15 @@ they say it is cross platform.
 This version uses the Skia library for more control over the text. The graphics library inside .Net Core 3 
 is inadequate.
 
+# build
+Install the .Net Core 3 SDK.
+
+To produce the binary files go To the project files and type:
+
+```
+dotnet publish -c Release
+```
+
 # overview
 This is how you use it:
 
