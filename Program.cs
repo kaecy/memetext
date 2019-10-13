@@ -49,8 +49,6 @@ namespace mememaker
 			SKCanvas canvas = new SKCanvas(bitmap);
 			SKPaint paint = new SKPaint();
 			SKRect rect = new SKRect();
-			SKColor black = new SKColor(0, 0, 0);
-			SKColor white = new SKColor(255, 225, 255);
 			
 			if (pressuru == null) {
 				Console.WriteLine("Couldn't find pressuru font\nHalting program");
@@ -75,7 +73,7 @@ namespace mememaker
 			
 			List<string> top_lines = wrapLines(text, paint, bitmap.Width);
 			foreach (string line in top_lines) {
-				paint.Color = white;
+				paint.Color = new SKColor(255, 255, 255);
 				paint.IsStroke = false;
 				
 				paint.MeasureText(line, ref rect);
@@ -85,7 +83,7 @@ namespace mememaker
 				canvas.DrawText(line, bitmap.Width/2f - rect.Width/2f, y + sp, paint);
 				
 				paint.IsStroke = true;
-				paint.Color = black;
+				paint.Color = new SKColor(0, 0, 0);
 				
 				canvas.DrawText(line, bitmap.Width/2f - rect.Width/2f, y + sp, paint);
 				sp += 5;
@@ -120,7 +118,7 @@ namespace mememaker
 			}
 			
 			SKImage image = SKImage.FromBitmap(bitmap);
-			SKData data = image.Encode(SKEncodedImageFormat.Png,0);
+			SKData data = image.Encode(SKEncodedImageFormat.Png, 80);
 			
 			using (Stream stream = File.OpenWrite("meme.png")) {
 				data.SaveTo(stream);

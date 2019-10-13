@@ -24,16 +24,15 @@ This is how you use it:
 Note: Currently you can't change the text size. It is fixed to 48pt.
 
 ```
-memetext ancient-aliens.jpg "" "i hold the world in my hands and an alien holds my hand"
+memetext cut-you.jpg "get out of my way" "or i will cut you and i can cut anything even a god"
 ```
+![](res/meme.png)
 
-Now you can use the internal image in the program files like this:
+I use this file a lot so I put it in the resource section.
 ```
-memetext /res:ancient-aliens "" "i hold the world in my hands and an alien holds my hand"
+memetext /res:ancient-aliens "aliens are our friends" "they only want to take over the world"
 ```
-
-Gives you this<br>
-![](res/meme.jpg)
+![](res/meme2.png)
 
 # credits
 **pressuru.otf** is from the [memetastic project](https://github.com/gsantner/memetastic).
