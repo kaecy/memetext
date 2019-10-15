@@ -33,8 +33,17 @@ namespace mememaker
 					string name = picture.Split(":")[1];
 					
 					picture = (program_dir + @"\res\img\") + name;
+					if (! File.Exists(picture)) {
+						Console.WriteLine("File: /res:" + name + ", doesn't exists");
+						return;
+					}
 				}
-				
+				else {
+					if (! File.Exists(picture)) {
+						Console.WriteLine("File: " + picture + ", doesn't exists");
+						return;
+					}
+				}
 				int errors = makeMeme(picture, text, text2);
 				if (errors == 0)
 					Console.WriteLine("Completed Successfully");
@@ -42,13 +51,15 @@ namespace mememaker
 		}
 		
 		static int makeMeme(string picture, string text, string text2) {	
-			
 			SKFontManager fontManager = SKFontManager.CreateDefault();
 			SKTypeface pressuru = fontManager.CreateTypeface(program_dir + @"\res\pressuru.otf");
 			SKBitmap bitmap = SKBitmap.Decode(picture);
 			SKCanvas canvas = new SKCanvas(bitmap);
 			SKPaint paint = new SKPaint();
 			SKRect rect = new SKRect();
+			
+			SKColor white = new SKColor(255, 255, 255);
+			SKColor black = new SKColor(0, 0, 0);
 			
 			if (pressuru == null) {
 				Console.WriteLine("Couldn't find pressuru font\nHalting program");
@@ -71,9 +82,11 @@ namespace mememaker
 			paint.MeasureText("A", ref rect);
 			textHeight = rect.Height;
 			
+			
+			
 			List<string> top_lines = wrapLines(text, paint, bitmap.Width);
 			foreach (string line in top_lines) {
-				paint.Color = new SKColor(255, 255, 255);
+				paint.Color = white;
 				paint.IsStroke = false;
 				
 				paint.MeasureText(line, ref rect);
@@ -83,7 +96,7 @@ namespace mememaker
 				canvas.DrawText(line, bitmap.Width/2f - rect.Width/2f, y + sp, paint);
 				
 				paint.IsStroke = true;
-				paint.Color = new SKColor(0, 0, 0);
+				paint.Color = black;
 				
 				canvas.DrawText(line, bitmap.Width/2f - rect.Width/2f, y + sp, paint);
 				sp += 5;
@@ -101,7 +114,7 @@ namespace mememaker
 			
 			// bottom text
 			foreach (string line in bottom_lines) {
-				paint.Color = new SKColor(0xff, 0xff, 0xff);
+				paint.Color = white;
 				paint.IsStroke = false;
 				
 				paint.MeasureText(line, ref rect);
@@ -111,7 +124,7 @@ namespace mememaker
 				canvas.DrawText(line, bitmap.Width/2f - rect.Width/2f, y + sp, paint);
 				
 				paint.IsStroke = true;
-				paint.Color = new SKColor(0, 0, 0);
+				paint.Color = black;
 				
 				canvas.DrawText(line, bitmap.Width/2f - rect.Width/2f, y + sp, paint);
 				sp += 5;

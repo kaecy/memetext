@@ -34,5 +34,10 @@ memetext /res:ancient-aliens "aliens are our friends" "they only want to take ov
 ```
 ![](res/meme2.png)
 
+```
+memetext /res:ancient-aliens "anliens built temples and monuments" "to let us know they were here"
+```
+![](res/meme3.png)
+
 # credits
 **pressuru.otf** is from the [memetastic project](https://github.com/gsantner/memetastic).
